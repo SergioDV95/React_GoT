@@ -14,7 +14,7 @@ function Home(){
 	}, [diapositivaActual]);
 
 	return(
-      <Carousel className="carrusel" selectedItem={diapositivaActual} onChange={(index) => {setDiapositiva(index)}} showThumbs={false}>
+      <Carousel className="carrusel" selectedItem={diapositivaActual} onChange={index => {setDiapositiva(index)}} showThumbs={false}>
          {datos && datos.map(item => {
             return(
                <Link className="personaje" to={`/personajes/${item.id}`} key={item.id}>
