@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  color: white;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.carrusel {
+  width: 100%;
+  height: 100%;
+}
+.carrusel .carousel {
+  height: 100%;
+}
+.carrusel .carousel .control-prev:hover {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.carrusel .carousel .control-next:hover {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.slider-wrapper {
+  height: 100%;
+}
+.slider-wrapper .slider {
+  height: 100%;
+}
+
+.caja {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgb(35, 34, 34);
+  width: 80vw;
+  height: 80vh;
+  border-radius: 15px;
+  box-shadow: 0 0 6px 0px black;
+}
+@media only screen and (min-width: 768px) {
+  .caja {
+    box-shadow: 0 0 12px 0px black;
+  }
+}
+.caja h3 {
+  font-size: 26px;
+  font-weight: bold;
+}
+.caja h4 {
+  font-size: 20px;
+  font-weight: lighter;
+}
+.caja .personajes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.caja .personajes .personaje {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.caja .personajes .personaje .datos {
+  align-items: start;
+}
+
+.caja_2 {
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgb(35, 34, 34);
+  width: 40vw;
+  height: 80vh;
+  border-radius: 15px;
+  box-shadow: 0 0 6px 0px black;
+}
+@media only screen and (min-width: 768px) {
+  .caja_2 {
+    box-shadow: 0 0 12px 0px black;
+  }
+}
+.caja_2 .datos {
+  gap: 20px;
+}
+.caja_2 .datos h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.caja_2 .datos h4 span {
+  font-weight: lighter;
+}
+.caja_2 .datos img {
+  max-width: 80%;
+  max-height: 80%;
+  padding-bottom: 20px;
+}/*# sourceMappingURL=index.css.map */
