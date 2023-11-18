@@ -7,7 +7,7 @@ import Personaje from "./Proyecto/pages/Personajes";
 const raiz = ReactDOM.createRoot(document.getElementById("root"));
 raiz.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
                 <Route path="/" element={
                     <section className="caja">
