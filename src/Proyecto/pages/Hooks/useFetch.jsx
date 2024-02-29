@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (URL) => {
+const useFetch = (URL, method) => {
 	const [datos, setDatos] = useState(null);
 	const options = {
-		method: "GET",
+		method: method,
 		url: URL,
 	};
 	useEffect(() => {
 		fetch(options.url)
-			.then(text => text.json())
-			.then(resp => setDatos(resp));
+			.then(res => res.json())
+			.then(res => setDatos(res));
 	}, [options.url]);
 
 	try {

@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import useFetch from "./Hooks/useFetch";
 function Personaje() {
    const { id } = useParams();
-   const personaje = useFetch(`https://thronesapi.com/api/v2/Characters/${id}`);
+   const personaje = useFetch(`https://thronesapi.com/api/v2/Characters/${id}`, 'GET');
    return (
       personaje && 
       <div className="columna datos">

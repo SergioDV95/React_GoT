@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Home(){
-	const datos = useFetch('https://thronesapi.com/api/v2/Characters');
+	const datos = useFetch('https://thronesapi.com/api/v2/Characters', 'GET');
 	const [diapositivaActual, setDiapositiva] = useState(Number(localStorage.getItem('diapositiva')) || 0);
 
 	useEffect(() => {
@@ -15,15 +15,15 @@ function Home(){
 
 	return(
       <Carousel className="carrusel" selectedItem={diapositivaActual} onChange={index => {setDiapositiva(index)}} showThumbs={false}>
-         {datos && datos.map(item => {
+         {datos && datos.map(({id, fullName, title, imageUrl, image}) => {
             return(
-               <Link className="personaje" to={`/personajes/${item.id}`} key={item.id}>
+               <Link className="personaje" to={`/personajes/${id}`} key={id}>
                   <div className="columna datos">
-                     <h3>{item.fullName ?? `Desconocido`}</h3>
-                     <h4>{item.title ?? `Desconocido`}</h4>
+                     <h3>{fullName ?? `Desconocido`}</h3>
+                     <h4>{title ?? `Desconocido`}</h4>
                   </div>
                   <div className="imagen columna">
-                     <img className="imagen" alt={item.image} src={item.imageUrl}></img>
+                     <img className="imagen" alt={image} src={imageUrl}></img>
                   </div>
                </Link>
             )
